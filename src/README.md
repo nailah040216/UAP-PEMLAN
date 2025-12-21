@@ -247,11 +247,11 @@ Contoh:
 
 ## 👨‍💻 Identitas
 
-**Nama**: Nailah Dardjatur Rofi'ah
+**Nama**: Nailah Dardjatur Rofi'ah  
 **NIM**: 202410370110384
 
-**Nama**: Jenita Oktaviana
-**NIM**: 202410370110384
+**Nama**: Jenita Oktaviana R  
+**NIM**: 202410370110338
 
 **Kelas**: 3H-Informatika   
 **Universitas**: Universitas Muhammadiyah Malang
