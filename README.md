@@ -8,15 +8,10 @@ Aplikasi desktop berbasis Java Swing untuk mengelola data anggota OSIS dengan 4 
 - [Tampilan Aplikasi](#-tampilan-aplikasi)
 - [Teknologi](#️-teknologi)
 - [Persyaratan Sistem](#-persyaratan-sistem)
-- [Cara Instalasi](#-cara-instalasi)
 - [Cara Menjalankan](#-cara-menjalankan)
 - [Panduan Penggunaan](#-panduan-penggunaan)
 - [Struktur File](#-struktur-file)
-- [Konfigurasi](#-konfigurasi)
-- [Troubleshooting](#-troubleshooting)
-- [Kontribusi](#-kontribusi)
-- [Lisensi](#-lisensi)
-- [Pembuat](#-pembuat)
+- [Identitas](#-identitas_)
 
 ## ✨ Fitur Utama
 
