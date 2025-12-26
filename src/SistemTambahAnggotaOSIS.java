@@ -28,6 +28,7 @@ public class SistemTambahAnggotaOSIS extends JFrame {
     private static final String HISTORY_FILE = "history_transaksi.txt";
 
     private JLabel lblTotalSiswa, lblTotalIPA, lblTotalIPS, lblTotalBahasa;
+    private JLabel lblTotalTransaksi;
 
     private final Color COLOR_PRIMARY = new Color(142, 68, 173);
     private final Color COLOR_SECONDARY = new Color(52, 152, 219);
@@ -83,7 +84,7 @@ public class SistemTambahAnggotaOSIS extends JFrame {
 
         JLabel lblJudul = new JLabel("SISTEM PENGHITUNGAN JUMLAH ANGGOTA OSIS", SwingConstants.CENTER);
         lblJudul.setFont(new Font("Segoe UI", Font.BOLD, 22));
-        lblJudul.setForeground(Color.WHITE);
+        lblJudul.setForeground(Color.white);
         lblJudul.setBorder(BorderFactory.createEmptyBorder(15, 0, 8, 0));
         headerPanel.add(lblJudul, BorderLayout.NORTH);
 
@@ -268,7 +269,6 @@ public class SistemTambahAnggotaOSIS extends JFrame {
                 BorderFactory.createEmptyBorder(15, 15, 15, 15)
         ));
 
-        // Search panel
         JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 10));
         searchPanel.setBackground(Color.WHITE);
 
@@ -291,7 +291,6 @@ public class SistemTambahAnggotaOSIS extends JFrame {
 
         tablePanel.add(searchPanel, BorderLayout.NORTH);
 
-        // Table
         String[] columnNames = {"No", "NIS", "Nama Siswa", "Kelas", "Jurusan"};
         modelTabel = new DefaultTableModel(columnNames, 0) {
             @Override
@@ -304,18 +303,16 @@ public class SistemTambahAnggotaOSIS extends JFrame {
         tabelSiswa.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         tabelSiswa.setRowHeight(30);
         tabelSiswa.setSelectionBackground(new Color(173, 216, 230));
-        tabelSiswa.setSelectionForeground(Color.black);
+        tabelSiswa.setSelectionForeground(Color.BLACK);
         tabelSiswa.setGridColor(new Color(200, 200, 200));
         tabelSiswa.setShowGrid(true);
 
-        // Table header styling
         JTableHeader header = tabelSiswa.getTableHeader();
         header.setFont(new Font("Segoe UI", Font.BOLD, 13));
         header.setBackground(COLOR_PRIMARY);
         header.setForeground(Color.black);
         header.setPreferredSize(new Dimension(0, 40));
 
-        // Enable sorting
         sorter = new TableRowSorter<>(modelTabel);
         tabelSiswa.setRowSorter(sorter);
 
@@ -403,7 +400,6 @@ public class SistemTambahAnggotaOSIS extends JFrame {
 
         gbc.gridwidth = 1;
 
-        // NIS
         JLabel lblNIS = new JLabel("NIS:");
         lblNIS.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         gbc.gridx = 0;
@@ -419,7 +415,6 @@ public class SistemTambahAnggotaOSIS extends JFrame {
         gbc.gridx = 1;
         formPanel.add(txtNIS, gbc);
 
-        // Nama
         JLabel lblNama = new JLabel("Nama Siswa:");
         lblNama.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         gbc.gridx = 0;
@@ -435,7 +430,6 @@ public class SistemTambahAnggotaOSIS extends JFrame {
         gbc.gridx = 1;
         formPanel.add(txtNama, gbc);
 
-        // Kelas
         JLabel lblKelas = new JLabel("Kelas:");
         lblKelas.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         gbc.gridx = 0;
@@ -451,7 +445,6 @@ public class SistemTambahAnggotaOSIS extends JFrame {
         gbc.gridx = 1;
         formPanel.add(txtKelas, gbc);
 
-        // Jurusan
         JLabel lblJurusan = new JLabel("Jurusan:");
         lblJurusan.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         gbc.gridx = 0;
@@ -587,10 +580,10 @@ public class SistemTambahAnggotaOSIS extends JFrame {
         infoPanel.setBackground(Color.WHITE);
         infoPanel.setBorder(BorderFactory.createEmptyBorder(15, 0, 0, 0));
 
-        JLabel lblInfo = new JLabel("📝 Total Transaksi: " + dataHistory.size());
-        lblInfo.setFont(new Font("Segoe UI", Font.BOLD, 14));
-        lblInfo.setForeground(COLOR_PRIMARY);
-        infoPanel.add(lblInfo, BorderLayout.WEST);
+        lblTotalTransaksi = new JLabel("📝 Total Transaksi: " + dataHistory.size());
+        lblTotalTransaksi.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        lblTotalTransaksi.setForeground(COLOR_PRIMARY);
+        infoPanel.add(lblTotalTransaksi, BorderLayout.WEST);
 
         JButton btnClearHistory = new JButton("🗑️ Hapus Semua History");
         btnClearHistory.setFont(new Font("Segoe UI", Font.BOLD, 13));
@@ -628,6 +621,10 @@ public class SistemTambahAnggotaOSIS extends JFrame {
                     entry.getNama(),
                     entry.getDetail()
             });
+        }
+        // Update total transaksi label
+        if (lblTotalTransaksi != null) {
+            lblTotalTransaksi.setText("📝 Total Transaksi: " + dataHistory.size());
         }
     }
 
@@ -883,6 +880,7 @@ public class SistemTambahAnggotaOSIS extends JFrame {
             app.setVisible(true);
             app.updateStatistik();
             app.updateTabel();
+            app.updateHistoryTable();
         });
     }
 }

@@ -1,0 +1,13 @@
+26/12/2025 08:09:31|TAMBAH|123|Nailah Dardjatur Rofi'ah|Kelas: XII IPA 1, Jurusan: IPA
+26/12/2025 08:10:04|TAMBAH|012|Jenita Oktaviana R|Kelas: XI IPS 2, Jurusan: IPS
+26/12/2025 08:10:39|TAMBAH|028|Reva Lina|Kelas: X IPA 2, Jurusan: IPA
+26/12/2025 08:22:04|TAMBAH|011|Siti Madinah|Kelas: XII BAHASA 3, Jurusan: Bahasa
+26/12/2025 08:22:35|TAMBAH|111|Muhammad|Kelas: XII IPA 1, Jurusan: IPA
+26/12/2025 08:23:18|TAMBAH|009|Rangga|Kelas: XI IPS 1, Jurusan: IPS
+26/12/2025 08:24:13|TAMBAH|023|Aliando|Kelas: X Bahasa 2, Jurusan: Bahasa
+26/12/2025 08:24:32|UPDATE|023|Aliando|Data lama: Aliando (X Bahasa 2 Bahasa) → Baru: X BAHASA 2 Bahasa
+26/12/2025 08:25:27|TAMBAH|045|Prilly Latuconssina|Kelas: XI BAHASA 1, Jurusan: Bahasa
+26/12/2025 08:26:21|TAMBAH|022|Kim Namjoon|Kelas: XII IPA 1, Jurusan: IPA
+26/12/2025 08:26:47|TAMBAH|067|Juleha|Kelas: X IPS 3, Jurusan: IPS
+26/12/2025 08:40:58|HAPUS|009|Rangga|Kelas: XI IPS 1, Jurusan: IPS
+26/12/2025 08:44:48|UPDATE|111|Muhammad|Data lama: Muhammad (XII IPA 1 IPA) → Baru: XI IPA 1 IPA
